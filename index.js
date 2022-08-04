@@ -13,7 +13,9 @@ app.use('/image/uploads',express.static(path.join(__dirname,'/image/uploads')));
 const route = require('./routes');
 app.use(route)
 
-
+app.get('/', (req,res) =>{
+    res.send('sa')
+})
 
 app.listen(port, () =>{
     console.log(`app listening on port: ${port}`)
